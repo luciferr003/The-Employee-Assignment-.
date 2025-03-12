@@ -1,6 +1,11 @@
 
 public class Entry 
 {
+	
+	void input ()
+	{
+		
+	}
 
 	public static void main(String[] args) 
 	{
@@ -8,9 +13,10 @@ public class Entry
 		String name ;
 		String Address ;
 		String phone_no ;
-		byte gender ;
+		String gender ;
 		int age ;
 		int salary ;
+		employee objEmployee ;
 		
 		while(true)
 		{
@@ -28,7 +34,7 @@ public class Entry
 			
 			switch(choice)
 			{
-				case 1:
+				case 1:  // Add an Employee
 					while(true)
 					{
 						System.out.println();
@@ -41,34 +47,91 @@ public class Entry
 						System.out.println("Enter your Choice : ");
 						choice = consoleInput.getInt();
 						
-						switch(choice)
-						{
-							case 1:
-								
-								System.out.println("Enter the Employee Name : ");
-								name = consoleInput.getString();
-								
-								System.out.println("Enter the Employee Address : ");
-								Address = consoleInput.getString();
-								
-								System.out.println("Enter the Employee Phone no. : ");
-								phone_no = consoleInput.getString();
-								
-								System.out.println("Enter the Employee Gender : ");
-								gender = consoleInput.getByte();
-								
-								System.out.println("Enter the Employee Age : ");
-								age = consoleInput.getInt();
-								
-								System.out.println("Enter the Employee Salary : ");
-								salary = consoleInput.getInt();
-								
-								employee objEmployee = new employee(name, Address, phone_no, gender, age, salary) ;
+								switch(choice)
+								{
+									case 1: // Manager
+										
+										System.out.println("Enter the Employee Name : ");
+										name = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Address : ");
+										Address = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Phone no. : ");
+										phone_no = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Gender : ");
+										gender = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Age : ");
+										age = consoleInput.getInt();
+										
+										System.out.println("Enter the Employee Salary : ");
+										salary = consoleInput.getInt();
+
+										
+										objEmployee = new employee(name, Address, phone_no, gender, age, salary) ;
+										objEmployee.display();
+										break;
+										
+									case 2: // Engineer
+										
+										System.out.println("Enter the Employee Name : ");
+										name = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Address : ");
+										Address = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Phone no. : ");
+										phone_no = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Gender : ");
+										gender = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Age : ");
+										age = consoleInput.getInt();
+										
+										System.out.println("Enter the Employee Salary : ");
+										salary = consoleInput.getInt();
+										
+										objEmployee = new employee(name, Address, phone_no, gender, age, salary) ;
+										objEmployee.display();
+										break ;
+										
+		                            case 3: // Sales person
+		                            	
+		                            	System.out.println("Enter the Employee Name : ");
+										name = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Address : ");
+										Address = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Phone no. : ");
+										phone_no = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Gender : ");
+										gender = consoleInput.getString();
+										
+										System.out.println("Enter the Employee Age : ");
+										age = consoleInput.getInt();
+										
+										System.out.println("Enter the Employee Salary : ");
+										salary = consoleInput.getInt();
+										
+										objEmployee = new employee(name, Address, phone_no, gender, age, salary) ;
+										objEmployee.display();
+										break;
+										
+		                            case 4: // Exit
+		                            	break ;
+		                            
+										
+								}
 						}
-					}
+					
 					
 				case 2:
-					employee objEmployee = new employee();
+					objEmployee = new employee();
 					objEmployee.display();
 			}
 			

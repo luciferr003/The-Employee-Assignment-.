@@ -5,7 +5,7 @@ public class employee
 	String name ;
 	String address ;
 	String phone_no ;
-	byte gender ;
+	String gender ;
 	int age ;
 	int salary ;
 	
@@ -14,7 +14,7 @@ public class employee
 		
 	}
 
-	public employee(String name, String address, String phone_no, byte gender, int age, int salary) 
+	public employee(String name, String address, String phone_no, String gender, int age, int salary) 
 	{
 		this.name = name ;
 		this.address = address ;
