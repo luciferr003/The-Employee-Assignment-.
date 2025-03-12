@@ -26,12 +26,12 @@ public class employee
 	
 	void display()
 	{
-		System.out.println(name);
-		System.out.println(address);
-		System.out.println(phone_no);
-		System.out.println(gender);
-		System.out.println(age);
-		System.out.println(salary);
+		System.out.println("Name : " +name);
+		System.out.println("Address : "+address);
+		System.out.println("Phone no : "+phone_no);
+		System.out.println("Gender : "+gender);
+		System.out.println("Age : "+age);
+		System.out.println("Salary : "+salary);
 	}
 	
 	

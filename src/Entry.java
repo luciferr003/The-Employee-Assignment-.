@@ -16,7 +16,15 @@ public class Entry
 		String gender ;
 		int age ;
 		int salary ;
+		
+		float hra ;
+		int overTime ;
+		int comission ;
+		
 		employee objEmployee ;
+		manager objManager ;
+		engineer objEngineer ;
+		salesPerson objSalesPerson ;
 		
 		while(true)
 		{
@@ -68,10 +76,13 @@ public class Entry
 										
 										System.out.println("Enter the Employee Salary : ");
 										salary = consoleInput.getInt();
+										
+										System.out.println("Enter the Employee  : ");
+										hra = consoleInput.getFloat();
 
 										
-										objEmployee = new employee(name, Address, phone_no, gender, age, salary) ;
-										objEmployee.display();
+										objManager = new manager(name, Address, phone_no, gender, age, salary, hra) ;
+										objManager.display();
 										break;
 										
 									case 2: // Engineer
@@ -94,8 +105,11 @@ public class Entry
 										System.out.println("Enter the Employee Salary : ");
 										salary = consoleInput.getInt();
 										
-										objEmployee = new employee(name, Address, phone_no, gender, age, salary) ;
-										objEmployee.display();
+										System.out.println("Enter the Over Time : ");
+										overTime = consoleInput.getInt();
+										
+										objEngineer = new engineer(name, Address, phone_no, gender, age, salary, overTime) ;
+										objEngineer.display();
 										break ;
 										
 		                            case 3: // Sales person
@@ -118,8 +132,11 @@ public class Entry
 										System.out.println("Enter the Employee Salary : ");
 										salary = consoleInput.getInt();
 										
-										objEmployee = new employee(name, Address, phone_no, gender, age, salary) ;
-										objEmployee.display();
+										System.out.println("Enter the Comission : ");
+										comission = consoleInput.getInt();
+										
+										objSalesPerson = new salesPerson(name, Address, phone_no, gender, age, salary, comission) ;
+										objSalesPerson.display();
 										break;
 										
 		                            case 4: // Exit
